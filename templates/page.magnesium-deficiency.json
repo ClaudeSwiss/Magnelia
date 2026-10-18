@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "lp-magnesium-deficiency",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

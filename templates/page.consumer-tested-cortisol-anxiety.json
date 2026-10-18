@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "lp-consumer-tested-cortisol-anxiety",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "lp-glp-1-plateau-advertorial-v2",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "lp-advertorial-magnesium",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

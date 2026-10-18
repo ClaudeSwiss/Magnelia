@@ -1,0 +1,340 @@
+{{ 'magnelia-lp.css' | asset_url | stylesheet_tag }}
+
+<style>
+.mhome-wrap { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #1a2035; line-height: 1.6; }
+.mhome-hero { background: #1a2035; color: #fff; padding: 60px 20px; text-align: center; }
+.mhome-hero h1 { font-size: clamp(26px, 5vw, 44px); font-weight: 800; line-height: 1.2; max-width: 760px; margin: 0 auto 20px; }
+.mhome-hero p { font-size: clamp(16px, 2.5vw, 20px); max-width: 600px; margin: 0 auto 32px; opacity: 0.9; }
+.mhome-cta { display: inline-block; background: #e87722; color: #fff; font-size: 18px; font-weight: 800; padding: 18px 40px; border-radius: 4px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; }
+.mhome-cta:hover { background: #d06a1a; color: #fff; }
+.mhome-cta-sub { display: block; font-size: 13px; margin-top: 10px; opacity: 0.7; }
+.mhome-section { padding: 60px 20px; }
+.mhome-section-inner { max-width: 960px; margin: 0 auto; }
+.mhome-section-alt { background: #f8f9fa; }
+.mhome-h2 { font-size: clamp(22px, 4vw, 32px); font-weight: 800; color: #1a2035; margin-bottom: 16px; }
+.mhome-h2-center { text-align: center; }
+.mhome-testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.mhome-tcard { background: #fff; border-radius: 8px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+.mhome-stars { color: #e87722; font-size: 18px; margin-bottom: 8px; }
+.mhome-tname { font-weight: 700; font-size: 13px; color: #6b7280; margin-top: 12px; }
+.mhome-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 24px; }
+.mhome-feat { display: flex; align-items: flex-start; gap: 12px; }
+.mhome-feat-icon { font-size: 22px; flex-shrink: 0; }
+.mhome-feat-text strong { display: block; font-weight: 700; margin-bottom: 4px; }
+.mhome-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; text-align: center; }
+.mhome-stat-num { font-size: clamp(36px, 6vw, 56px); font-weight: 900; color: #e87722; line-height: 1; }
+.mhome-stat-label { font-size: 14px; color: #6b7280; margin-top: 6px; }
+.mhome-compare { width: 100%; border-collapse: collapse; margin-top: 24px; }
+.mhome-compare th, .mhome-compare td { padding: 14px 16px; text-align: left; border-bottom: 1px solid #e5e7eb; font-size: 15px; }
+.mhome-compare thead th { background: #1a2035; color: #fff; font-weight: 700; }
+.mhome-compare tbody tr:nth-child(even) { background: #f8f9fa; }
+.mhome-compare .mhome-col-mag { color: #52cc30; font-weight: 700; }
+.mhome-compare .mhome-col-no { color: #dc2626; }
+.mhome-product-box { background: #1a2035; color: #fff; border-radius: 16px; padding: 40px; text-align: center; }
+.mhome-product-box h3 { color: #fff; font-size: clamp(20px, 3vw, 28px); font-weight: 800; margin-bottom: 8px; }
+.mhome-product-box .price { font-size: clamp(28px, 5vw, 42px); font-weight: 900; color: #e87722; }
+.mhome-product-box .price-sub { font-size: 14px; opacity: 0.8; margin-bottom: 24px; }
+.mhome-checklist { list-style: none; padding: 0; text-align: left; display: inline-block; margin: 16px 0 24px; }
+.mhome-checklist li { padding: 6px 0; font-size: 15px; }
+.mhome-check { color: #52cc30; margin-right: 8px; }
+.mhome-cross { color: #dc2626; margin-right: 8px; }
+.mhome-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 24px; }
+.mhome-step { border-radius: 8px; padding: 20px; border: 1px solid #e5e7eb; }
+.mhome-step-week { font-weight: 800; color: #e87722; margin-bottom: 8px; }
+.mhome-guarantee { display: flex; gap: 20px; align-items: flex-start; background: #f0fdf4; border: 2px solid #86efac; border-radius: 12px; padding: 24px; }
+.mhome-guarantee-icon { font-size: 48px; flex-shrink: 0; }
+.mhome-badges { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 32px; }
+.mhome-badge { text-align: center; }
+.mhome-badge-icon { font-size: 32px; margin-bottom: 6px; }
+.mhome-badge p { font-size: 13px; color: #6b7280; margin: 0; }
+.mhome-badge strong { display: block; font-size: 14px; color: #1a2035; }
+.mhome-problem-solution { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 8px; overflow: hidden; margin-top: 24px; }
+.mhome-problem { background: #fef2f2; padding: 24px; }
+.mhome-solution { background: #f0fdf4; padding: 24px; }
+.mhome-problem h4, .mhome-solution h4 { font-size: 16px; font-weight: 800; margin-bottom: 12px; }
+.mhome-problem h4 { color: #dc2626; }
+.mhome-solution h4 { color: #16a34a; }
+.mhome-problem li, .mhome-solution li { font-size: 14px; padding: 4px 0; list-style: none; }
+@media(max-width: 600px) { .mhome-problem-solution { grid-template-columns: 1fr; } }
+.mhome-newsletter { background: #1a2035; color: #fff; text-align: center; padding: 50px 20px; }
+.mhome-newsletter h3 { color: #fff; font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+.mhome-newsletter p { opacity: 0.8; font-size: 14px; margin-bottom: 20px; }
+.mhome-nl-form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto; flex-wrap: wrap; }
+.mhome-nl-form input { flex: 1; min-width: 200px; padding: 14px 16px; border: none; border-radius: 4px; font-size: 15px; }
+.mhome-nl-form button { background: #e87722; color: #fff; font-weight: 800; padding: 14px 24px; border: none; border-radius: 4px; font-size: 15px; cursor: pointer; white-space: nowrap; }
+</style>
+
+<div class="mhome-wrap">
+
+  {%- comment -%} HERO {%- endcomment -%}
+  <section class="mhome-hero">
+    <h1>Vous n'avez pas besoin d'une routine santé en 12 étapes. Juste deux gummies avant le coucher.</h1>
+    <p>Pas de grande gélule à avaler, pas de poudre à mélanger. Croquez deux gummies au magnésium bisglycinate avant de dormir — endormez-vous plus facilement, dormez toute la nuit, réveillez-vous vraiment reposée.</p>
+    <a href="/products/magnelia-magnesium-bisglycinate-gummies" class="mhome-cta">Découvrir Magnelia</a>
+    <span class="mhome-cta-sub">⭐ 4,9/5 · 120 000 clientes satisfaites · Satisfait ou remboursé 30 jours</span>
+  </section>
+
+  {%- comment -%} TESTIMONIALS {%- endcomment -%}
+  <section class="mhome-section">
+    <div class="mhome-section-inner">
+      <h2 class="mhome-h2 mhome-h2-center">Ce que nos clientes disent</h2>
+      <div class="mhome-testimonials">
+        <div class="mhome-tcard">
+          <div class="mhome-stars">★★★★★</div>
+          <p>« Depuis la mort de mon mari il y a plus de dix ans, je ne dormais plus vraiment. Je me réveillais à 2h ou 3h du matin et impossible de me rendormir. J'ai tout essayé. Avec ces gummies, j'ai enfin retrouvé des nuits entières. Je n'en reviens toujours pas. »</p>
+          <div class="mhome-tname">Isabelle M., 64 ans — Retraitée, Lyon</div>
+        </div>
+        <div class="mhome-tcard">
+          <div class="mhome-stars">★★★★★</div>
+          <p>« Le sommeil est plus profond — je ne me réveille plus toutes les deux heures. Avant, je m'endormais bien, puis bam, 3h du mat', les yeux grands ouverts, à calculer combien il me restait avant le réveil. Et parfois une crampe dans le mollet tellement forte que je me levais en sautant. Fini tout ça. »</p>
+          <div class="mhome-tname">Sylvie R., 57 ans — Infirmière en retraite, Bordeaux</div>
+        </div>
+        <div class="mhome-tcard">
+          <div class="mhome-stars">★★★★★</div>
+          <p>« Je n'y croyais pas, j'avais déjà essayé des sprays, des boissons, des gélules. Rien ne marchait. La mélatonine me laissait groggy toute la matinée. Là, j'étais sceptique — et surprise. Je me suis endormie facilement, levée une fois pour les toilettes, et dormi toute la nuit. Reposée le matin. »</p>
+          <div class="mhome-tname">Nathalie G., 61 ans — Cadre administrative, Paris</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} WHY IT WORKS {%- endcomment -%}
+  <section class="mhome-section mhome-section-alt">
+    <div class="mhome-section-inner">
+      <h2 class="mhome-h2 mhome-h2-center">Le magnésium est étudié depuis des décennies pour son rôle dans le sommeil, la relaxation musculaire et un système nerveux calme</h2>
+      <p style="text-align:center;max-width:640px;margin:0 auto 32px;color:#4b5563;">Les recherches montrent que le magnésium bisglycinate favorise un sommeil plus profond, réduit les tensions et aide l'organisme à récupérer du stress quotidien. <strong>Le bisglycinate est la forme la plus biodisponible — efficace et bien tolérée chaque soir.</strong></p>
+
+      <div class="mhome-problem-solution">
+        <div class="mhome-problem">
+          <h4>Vous vous reconnaissez ?</h4>
+          <ul>
+            <li><span class="mhome-cross">✗</span> Un stress qui ne lâche jamais</li>
+            <li><span class="mhome-cross">✗</span> Un ventre qui ne bouge pas malgré les efforts</li>
+            <li><span class="mhome-cross">✗</span> Épuisée mais incapable de vous endormir</li>
+            <li><span class="mhome-cross">✗</span> Sceptique après des dizaines de compléments sans résultat</li>
+          </ul>
+        </div>
+        <div class="mhome-solution">
+          <h4>Magnelia aide votre corps à :</h4>
+          <ul>
+            <li><span class="mhome-check">✓</span> Se détendre et se calmer naturellement</li>
+            <li><span class="mhome-check">✓</span> S'intégrer facilement à votre routine du soir</li>
+            <li><span class="mhome-check">✓</span> Apporter le magnésium que votre corps assimile vraiment</li>
+            <li><span class="mhome-check">✓</span> Agir sans effet somnifère ni groggy le matin</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} STATS {%- endcomment -%}
+  <section class="mhome-section">
+    <div class="mhome-section-inner">
+      <h2 class="mhome-h2 mhome-h2-center">Magnelia — ce que disent les chiffres</h2>
+      <div class="mhome-stats">
+        <div>
+          <div class="mhome-stat-num">97%</div>
+          <div class="mhome-stat-label">ont ressenti plus de calme et de détente au coucher dans les deux premières semaines</div>
+        </div>
+        <div>
+          <div class="mhome-stat-num">94%</div>
+          <div class="mhome-stat-label">se réveillaient moins souvent la nuit — et se rendormaient plus facilement</div>
+        </div>
+        <div>
+          <div class="mhome-stat-num">93%</div>
+          <div class="mhome-stat-label">recommanderaient Magnelia à une amie qui souffre de nuits difficiles</div>
+        </div>
+        <div>
+          <div class="mhome-stat-num">120K+</div>
+          <div class="mhome-stat-label">clientes font confiance à Magnelia pour leur sommeil et leur récupération</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} COMPARISON TABLE {%- endcomment -%}
+  <section class="mhome-section mhome-section-alt">
+    <div class="mhome-section-inner">
+      <h2 class="mhome-h2 mhome-h2-center">Magnelia vs les autres</h2>
+      <div style="overflow-x:auto;">
+        <table class="mhome-compare">
+          <thead>
+            <tr>
+              <th>Critère</th>
+              <th>Magnelia</th>
+              <th>Magnésium marin / pharmacie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Forme de magnésium</td>
+              <td class="mhome-col-mag">✓ Bisglycinate pur</td>
+              <td class="mhome-col-no">✗ Oxyde ou carbonate</td>
+            </tr>
+            <tr>
+              <td>Absorption réelle</td>
+              <td class="mhome-col-mag">✓ Jusqu'à 90%</td>
+              <td class="mhome-col-no">✗ ~4% (oxyde)</td>
+            </tr>
+            <tr>
+              <td>Effets digestifs</td>
+              <td class="mhome-col-mag">✓ Aucun effet laxatif</td>
+              <td class="mhome-col-no">✗ Ballonnements, diarrhées fréquents</td>
+            </tr>
+            <tr>
+              <td>Format</td>
+              <td class="mhome-col-mag">✓ Gummies — agréable à croquer</td>
+              <td class="mhome-col-no">✗ Gélules à avaler</td>
+            </tr>
+            <tr>
+              <td>Dose efficace</td>
+              <td class="mhome-col-mag">✓ 400 mg en 2 gummies</td>
+              <td class="mhome-col-no">✗ 4 à 6 comprimés nécessaires</td>
+            </tr>
+            <tr>
+              <td>Tests indépendants</td>
+              <td class="mhome-col-mag">✓ Double test tiers : fabrication + labo</td>
+              <td class="mhome-col-no">✗ Non divulgués</td>
+            </tr>
+            <tr>
+              <td>Résultats constatés</td>
+              <td class="mhome-col-mag">✓ 4 à 8 semaines</td>
+              <td class="mhome-col-no">✗ Souvent aucun résultat</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} PRODUCT BOX {%- endcomment -%}
+  <section class="mhome-section">
+    <div class="mhome-section-inner">
+      <div class="mhome-product-box">
+        <h3>Magnelia — Gummies Magnésium Bisglycinate</h3>
+        <div class="price">19€<span style="font-size:18px;font-weight:400">/sachet</span></div>
+        <div class="price-sub">Approvisionnement 180 jours · 0,63€ par nuit</div>
+        <ul class="mhome-checklist">
+          <li><span class="mhome-check">✓</span> S'endormir plus vite, sans se réveiller à 3h du mat'</li>
+          <li><span class="mhome-check">✓</span> Calme le système nerveux et les pensées qui tournent en boucle</li>
+          <li><span class="mhome-check">✓</span> Stoppe les crampes nocturnes et les jambes sans repos</li>
+          <li><span class="mhome-check">✓</span> Pas de groggy le matin — réveil clair et reposé</li>
+          <li><span class="mhome-check">✓</span> Gummy, pas une gélule — juste 2 gummies le soir</li>
+          <li><span class="mhome-check">✓</span> 0 g de sucre · Sans gluten · Végétalien (pectine)</li>
+          <li><span class="mhome-check">✓</span> Testé par labo indépendant · Certifié GMP</li>
+        </ul>
+        <a href="/products/magnelia-magnesium-bisglycinate-gummies" class="mhome-cta" style="display:inline-block;width:auto;">Commander Magnelia</a>
+        <p style="font-size:13px;opacity:0.7;margin-top:12px;">Satisfait ou remboursé 30 jours · Expédition suivie · Uniquement sur trymagnelia.com</p>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} HOW IT WORKS {%- endcomment -%}
+  <section class="mhome-section mhome-section-alt">
+    <div class="mhome-section-inner">
+      <h2 class="mhome-h2 mhome-h2-center">Comment ça fonctionne dans votre corps</h2>
+      <p style="text-align:center;max-width:600px;margin:0 auto 24px;color:#4b5563;">Le bisglycinate est lié à la glycine, un acide aminé que votre intestin reconnaît. L'absorption atteint jusqu'à 90%. Une fois absorbé, le magnésium fait quatre choses que votre système nerveux attendait :</p>
+      <div class="mhome-features">
+        <div class="mhome-feat">
+          <div class="mhome-feat-icon">🧠</div>
+          <div class="mhome-feat-text"><strong>Il calme la spirale de stress</strong> Le magnésium freine le cortisol en excès — ce cortisol qui vous réveille à 3h du matin quand il devrait être au plus bas.</div>
+        </div>
+        <div class="mhome-feat">
+          <div class="mhome-feat-icon">💪</div>
+          <div class="mhome-feat-text"><strong>Il détend les muscles lisses</strong> Plus de crampes, plus de jambes sans repos, plus d'épaules contractées qui vous empêchent de vous installer confortablement.</div>
+        </div>
+        <div class="mhome-feat">
+          <div class="mhome-feat-icon">💬</div>
+          <div class="mhome-feat-text"><strong>Il aide le cerveau à produire du GABA</strong> Le GABA est le neurotransmetteur qui éteint les pensées qui tournent en boucle. Sans magnésium, votre cerveau ne trouve plus le bouton OFF.</div>
+        </div>
+        <div class="mhome-feat">
+          <div class="mhome-feat-icon">⚡</div>
+          <div class="mhome-feat-text"><strong>Il reconstitue les réserves épuisées</strong> La caféine, l'alcool, le stress, certains médicaments drainent le magnésium. Magnelia compense ce qu'une alimentation normale ne peut plus fournir seule.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} TIMELINE {%- endcomment -%}
+  <section class="mhome-section">
+    <div class="mhome-section-inner">
+      <h2 class="mhome-h2 mhome-h2-center">Ce que vous ressentez — semaine par semaine</h2>
+      <p style="text-align:center;color:#4b5563;max-width:560px;margin:0 auto 24px;">Magnelia n'agit pas comme un somnifère. Vous ressentez les effets progressivement. C'est une restauration, pas une sédation. La grande majorité des clientes constate quelque chose dans les premières semaines.</p>
+      <div class="mhome-steps">
+        <div class="mhome-step">
+          <div class="mhome-step-week">Semaine 1</div>
+          <p>S'endormir est plus facile. Moins de réveils en pleine nuit. Les crampes commencent à s'espacer.</p>
+        </div>
+        <div class="mhome-step">
+          <div class="mhome-step-week">Semaines 2 à 3</div>
+          <p>Vous commencez à dormir toute la nuit. Les matins sont différents — moins d'anxiété, moins de brouillard. L'énergie se stabilise.</p>
+        </div>
+        <div class="mhome-step">
+          <div class="mhome-step-week">Semaine 4 et au-delà</div>
+          <p>L'effet complet s'installe. Votre système nerveux a reconstitué ses réserves de magnésium. Le stress ne monte plus aussi vite. Le sommeil devient fiable.</p>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:14px;color:#9ca3af;margin-top:20px;">77% des Françaises entre 50 et 65 ans sont carencées en magnésium (données SUVIMAX). Magnelia compense ce que votre alimentation ne peut plus fournir seule.</p>
+    </div>
+  </section>
+
+  {%- comment -%} GUARANTEE {%- endcomment -%}
+  <section class="mhome-section mhome-section-alt">
+    <div class="mhome-section-inner">
+      <div class="mhome-guarantee">
+        <div class="mhome-guarantee-icon">🛡️</div>
+        <div>
+          <h3 style="font-size:20px;font-weight:800;margin-bottom:8px;">Satisfait ou remboursé — 30 jours. Un seul email. Sans questions.</h3>
+          <p>Essayez Magnelia pendant 30 jours. Si vous ne dormez pas mieux, si vous ne vous sentez pas plus calme, si vous ne constatez aucune différence — envoyez-nous un email. Nous vous remboursons intégralement. Vous gardez les sachets.</p>
+          <p style="margin:0;font-size:14px;color:#6b7280;">Nous savons que le magnésium qui s'absorbe vraiment est différent de ce que vous avez peut-être essayé. Nous préférons que vous testiez plutôt que d'hésiter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} TRUST BADGES {%- endcomment -%}
+  <section class="mhome-section">
+    <div class="mhome-section-inner" style="text-align:center;">
+      <h2 class="mhome-h2 mhome-h2-center">Commander en toute confiance</h2>
+      <div class="mhome-badges">
+        <div class="mhome-badge">
+          <div class="mhome-badge-icon">🚚</div>
+          <strong>Livraison rapide et suivie</strong>
+          <p>Réception en 3 à 5 jours ouvrés</p>
+        </div>
+        <div class="mhome-badge">
+          <div class="mhome-badge-icon">💬</div>
+          <strong>Service client 7j/7</strong>
+          <p>Disponible même le week-end</p>
+        </div>
+        <div class="mhome-badge">
+          <div class="mhome-badge-icon">🔒</div>
+          <strong>Paiement sécurisé</strong>
+          <p>CB, PayPal, Apple Pay, Google Pay</p>
+        </div>
+        <div class="mhome-badge">
+          <div class="mhome-badge-icon">🔬</div>
+          <strong>Double test indépendant</strong>
+          <p>Fabrication + labo tiers certifié GMP</p>
+        </div>
+      </div>
+      <div style="margin-top:40px;">
+        <a href="/products/magnelia-magnesium-bisglycinate-gummies" class="mhome-cta">Commander Magnelia — 19€/sachet</a>
+        <p style="font-size:13px;color:#9ca3af;margin-top:12px;">Uniquement disponible sur trymagnelia.com · N'achetez pas de contrefaçons</p>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} LEGAL {%- endcomment -%}
+  <section style="padding: 20px; background: #f3f4f6; text-align: center;">
+    <p style="font-size:11px;color:#9ca3af;max-width:680px;margin:0 auto;">Le magnésium contribue à réduire la fatigue et à un fonctionnement normal du système nerveux (allégation EFSA autorisée). Ces affirmations n'ont pas été évaluées par l'ANSM. Ce produit n'est pas destiné à diagnostiquer, traiter, guérir ou prévenir une maladie. Consultez votre médecin ou pharmacien si vous avez un traitement en cours.</p>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "Home — Magnelia",
+  "settings": []
+}
+{% endschema %}

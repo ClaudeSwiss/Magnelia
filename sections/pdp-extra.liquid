@@ -1,0 +1,195 @@
+{{ 'magnelia-lp.css' | asset_url | stylesheet_tag }}
+
+<style>
+.mpdp-wrap { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #1a2035; line-height: 1.6; }
+.mpdp-section { padding: 50px 20px; }
+.mpdp-inner { max-width: 860px; margin: 0 auto; }
+.mpdp-section-alt { background: #f8f9fa; }
+.mpdp-h2 { font-size: clamp(20px, 3.5vw, 28px); font-weight: 800; color: #1a2035; margin-bottom: 16px; }
+.mpdp-h2-center { text-align: center; }
+.mpdp-feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 20px; }
+.mpdp-feat { background: #fff; border-radius: 8px; padding: 20px; border: 1px solid #e5e7eb; }
+.mpdp-feat-icon { font-size: 28px; margin-bottom: 8px; }
+.mpdp-feat h4 { font-size: 15px; font-weight: 800; margin-bottom: 6px; }
+.mpdp-feat p { font-size: 14px; color: #4b5563; margin: 0; }
+.mpdp-testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.mpdp-tcard { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,.07); }
+.mpdp-stars { color: #e87722; margin-bottom: 6px; }
+.mpdp-tname { font-weight: 700; font-size: 12px; color: #6b7280; margin-top: 10px; }
+.mpdp-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 20px; }
+.mpdp-step { border: 1px solid #e5e7eb; border-radius: 8px; padding: 18px; }
+.mpdp-step-week { font-weight: 800; color: #e87722; font-size: 14px; margin-bottom: 6px; }
+.mpdp-step p { font-size: 14px; margin: 0; }
+.mpdp-faq-item { border-bottom: 1px solid #e5e7eb; padding: 16px 0; }
+.mpdp-faq-q { font-weight: 700; margin-bottom: 8px; }
+.mpdp-faq-a { color: #4b5563; font-size: 15px; }
+.mpdp-guarantee { display: flex; gap: 20px; align-items: flex-start; background: #f0fdf4; border: 2px solid #86efac; border-radius: 12px; padding: 24px; margin-top: 20px; }
+.mpdp-guarantee-icon { font-size: 48px; flex-shrink: 0; }
+.mpdp-check { color: #52cc30; margin-right: 6px; }
+.mpdp-cross { color: #dc2626; margin-right: 6px; }
+.mpdp-cta-full { display: block; background: #e87722; color: #fff; font-size: 18px; font-weight: 800; padding: 18px 24px; border-radius: 4px; text-decoration: none; text-align: center; text-transform: uppercase; max-width: 480px; margin: 24px auto 0; }
+.mpdp-cta-full:hover { background: #d06a1a; color: #fff; }
+.mpdp-badge-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 24px; }
+.mpdp-badge { font-size: 13px; color: #6b7280; text-align: center; }
+.mpdp-badge-icon { font-size: 24px; display: block; margin-bottom: 4px; }
+</style>
+
+<div class="mpdp-wrap">
+
+  {%- comment -%} BENEFITS {%- endcomment -%}
+  <section class="mpdp-section mpdp-section-alt">
+    <div class="mpdp-inner">
+      <h2 class="mpdp-h2 mpdp-h2-center">Comment Magnelia agit dans votre corps</h2>
+      <p style="text-align:center;max-width:580px;margin:0 auto 24px;color:#4b5563;">Le bisglycinate est lié à la glycine, un acide aminé que votre intestin reconnaît comme une molécule familière. Résultat : absorption jusqu'à 90%, sans rester dans le transit. Une fois assimilé, le magnésium fait quatre choses :</p>
+      <div class="mpdp-feat-grid">
+        <div class="mpdp-feat">
+          <div class="mpdp-feat-icon">🧠</div>
+          <h4>Il éteint le cortisol</h4>
+          <p>Le magnésium freine l'excès de cortisol — ce stress hormonal qui vous réveille à 3h du matin au lieu de 7h.</p>
+        </div>
+        <div class="mpdp-feat">
+          <div class="mpdp-feat-icon">💪</div>
+          <h4>Il détend les muscles</h4>
+          <p>Plus de crampes nocturnes, plus de jambes sans repos, plus d'épaules contractées qui perturbent votre sommeil.</p>
+        </div>
+        <div class="mpdp-feat">
+          <div class="mpdp-feat-icon">💬</div>
+          <h4>Il active le GABA</h4>
+          <p>Le GABA est le neurotransmetteur qui coupe les pensées qui tournent en boucle. Le magnésium lui permet de fonctionner.</p>
+        </div>
+        <div class="mpdp-feat">
+          <div class="mpdp-feat-icon">⚡</div>
+          <h4>Il reconstitue vos réserves</h4>
+          <p>Le stress, la caféine, certains médicaments drainent le magnésium. Magnelia compense ce déficit structurel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} TESTIMONIALS {%- endcomment -%}
+  <section class="mpdp-section">
+    <div class="mpdp-inner">
+      <h2 class="mpdp-h2 mpdp-h2-center">Ce que nos clientes vivent — en leurs mots</h2>
+      <div class="mpdp-testimonials">
+        <div class="mpdp-tcard">
+          <div class="mpdp-stars">★★★★★</div>
+          <p>« Ce "cerveau qui ne s'arrête pas à 3h du matin" — complètement disparu. Je me réveillais et je faisais des listes mentales, je repensais à des conversations, je planifiais toute la journée du lendemain. Maintenant si je me réveille, je me retourne et je me rendors en deux minutes. »</p>
+          <div class="mpdp-tname">Patricia L., 62 ans — Enseignante retraitée, Nantes</div>
+        </div>
+        <div class="mpdp-tcard">
+          <div class="mpdp-stars">★★★★★</div>
+          <p>« En quelques jours, j'ai retrouvé un calme que je n'avais pas ressenti depuis des années. Ces angoisses du soir qui me reprenaient à 3h — envolées. Mes pensées nocturnes se sont apaisées. J'attends le soir avec plaisir maintenant, au lieu de le redouter. »</p>
+          <div class="mpdp-tname">Sylvie R., 57 ans — Infirmière en retraite, Bordeaux</div>
+        </div>
+        <div class="mpdp-tcard">
+          <div class="mpdp-stars">★★★★★</div>
+          <p>« La toute première nuit, mon esprit n'a pas recommencé à cogiter quand je me suis réveillée à 3h. J'n'arrivais pas à y croire. La troisième nuit, j'ai dormi 8 heures d'une traite. Je me suis réveillée toute seule, sans réveil, fraîche et de bonne humeur. Vraiment reconnaissante. »</p>
+          <div class="mpdp-tname">Marie-Claire B., 65 ans — Retraitée, Toulouse</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} TIMELINE {%- endcomment -%}
+  <section class="mpdp-section mpdp-section-alt">
+    <div class="mpdp-inner">
+      <h2 class="mpdp-h2 mpdp-h2-center">Ce que vous ressentez semaine après semaine</h2>
+      <p style="text-align:center;color:#4b5563;max-width:540px;margin:0 auto 20px;">Magnelia n'agit pas comme un somnifère. Vous le ressentez progressivement — c'est une restauration, pas une sédation.</p>
+      <div class="mpdp-steps">
+        <div class="mpdp-step">
+          <div class="mpdp-step-week">Semaine 1</div>
+          <p>S'endormir est plus facile. Moins de réveils nocturnes. Les crampes commencent à s'espacer.</p>
+        </div>
+        <div class="mpdp-step">
+          <div class="mpdp-step-week">Semaines 2–3</div>
+          <p>Vous dormez toute la nuit. Les matins changent — moins d'anxiété, moins de brouillard. L'énergie se stabilise.</p>
+        </div>
+        <div class="mpdp-step">
+          <div class="mpdp-step-week">Semaine 4+</div>
+          <p>L'effet complet s'installe. Le système nerveux a reconstitué ses réserves. Le stress ne monte plus aussi vite. Le sommeil devient fiable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} FAQ {%- endcomment -%}
+  <section class="mpdp-section">
+    <div class="mpdp-inner">
+      <h2 class="mpdp-h2">Questions fréquentes</h2>
+
+      <div class="mpdp-faq-item">
+        <div class="mpdp-faq-q">Combien de temps avant de ressentir les effets ?</div>
+        <div class="mpdp-faq-a">La plupart des clientes ressentent quelque chose dans les 7 à 14 premiers jours : s'endormir plus facilement, moins de réveils nocturnes, crampes qui s'espacent. L'effet complet s'installe en 4 à 8 semaines, quand vos réserves cellulaires sont reconstituées.</div>
+      </div>
+
+      <div class="mpdp-faq-item">
+        <div class="mpdp-faq-q">Pourquoi le magnésium que j'ai déjà essayé n'a rien fait ?</div>
+        <div class="mpdp-faq-a">Le magnésium marin vendu en pharmacie (Juvamine, Thalamag, etc.) contient principalement de l'oxyde de magnésium — une forme dont l'absorption estimée est d'environ 4%. Le bisglycinate, lui, est lié à la glycine que votre intestin reconnaît : absorption jusqu'à 90%. Ce n'est pas la même molécule, c'est la même raison pour laquelle beaucoup concluent à tort que "le magnésium ne leur fait rien".</div>
+      </div>
+
+      <div class="mpdp-faq-item">
+        <div class="mpdp-faq-q">Y a-t-il des effets secondaires ou un effet laxatif ?</div>
+        <div class="mpdp-faq-a">Non. L'oxyde de magnésium attire l'eau dans l'intestin par osmose — d'où les diarrhées et ballonnements bien connus. Le bisglycinate contourne complètement ce mécanisme : il est absorbé avant d'atteindre le côlon. Aucun effet laxatif, aucun inconfort digestif.</div>
+      </div>
+
+      <div class="mpdp-faq-item">
+        <div class="mpdp-faq-q">Puis-je le prendre avec mes médicaments ?</div>
+        <div class="mpdp-faq-a">Magnelia est un complément alimentaire à base de magnésium bisglycinate. Consultez votre médecin ou pharmacien si vous prenez un traitement régulier, notamment des médicaments pour la tension, des inhibiteurs de la pompe à protons (oméprazole) ou des diurétiques.</div>
+      </div>
+
+      <div class="mpdp-faq-item">
+        <div class="mpdp-faq-q">Comment prendre Magnelia ?</div>
+        <div class="mpdp-faq-a">2 gummies le soir, environ 30 minutes avant de dormir. Inutile de les prendre avec de la nourriture. C'est tout. Aucun verre d'eau obligatoire, aucune contrainte de timing compliqué.</div>
+      </div>
+
+      <div class="mpdp-faq-item">
+        <div class="mpdp-faq-q">Et si ça ne fonctionne pas pour moi ?</div>
+        <div class="mpdp-faq-a">Vous êtes protégée par notre garantie satisfait ou remboursé 30 jours. Un seul email à notre service client — nous vous remboursons intégralement. Vous gardez les sachets. Aucune condition. Aucune question.</div>
+      </div>
+
+      <div class="mpdp-faq-item">
+        <div class="mpdp-faq-q">Pourquoi Magnelia n'est-il pas vendu en pharmacie ?</div>
+        <div class="mpdp-faq-a">Pour maintenir la qualité et le prix. En circuit direct (sans intermédiaire distributeur, sans référencement officine), nous pouvons utiliser la forme de magnésium la plus coûteuse à produire, faire tester chaque lot deux fois, et vous proposer un prix honnête. Le bisglycinate pur à 400 mg par portion, c'est 10 fois plus cher à fabriquer que l'oxyde. C'est un choix de valeur, pas de volume.</div>
+      </div>
+
+      <div class="mpdp-faq-item">
+        <div class="mpdp-faq-q">Quelle est la différence entre glycinate et bisglycinate ?</div>
+        <div class="mpdp-faq-a">Le glycinate est lié à une molécule de glycine, le bisglycinate à deux. Cette double liaison offre une stabilité digestive supérieure et une absorption légèrement meilleure. C'est la forme recommandée par les professionnels de santé qui connaissent les différences d'absorption entre les formes.</div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} GUARANTEE {%- endcomment -%}
+  <section class="mpdp-section mpdp-section-alt">
+    <div class="mpdp-inner">
+      <div class="mpdp-guarantee">
+        <div class="mpdp-guarantee-icon">🛡️</div>
+        <div>
+          <h3 style="font-size:20px;font-weight:800;margin-bottom:8px;">Satisfait ou remboursé 30 jours — un seul email, sans questions</h3>
+          <p>Essayez Magnelia pendant 30 jours. Si vous ne dormez pas mieux, si vous ne vous sentez pas plus calme, si vous ne constatez aucune différence — envoyez-nous un seul email. Remboursement intégral. Vous gardez les sachets.</p>
+          <p style="font-size:14px;color:#6b7280;margin:0;">Nous savons que le magnésium qui s'absorbe vraiment est différent de ce que vous avez peut-être déjà essayé. Nous préférons que vous testiez plutôt qu'hésiter.</p>
+        </div>
+      </div>
+
+      <div class="mpdp-badge-row">
+        <div class="mpdp-badge"><span class="mpdp-badge-icon">🚚</span>Livraison suivie 3–5 jours</div>
+        <div class="mpdp-badge"><span class="mpdp-badge-icon">🔬</span>Double test indépendant</div>
+        <div class="mpdp-badge"><span class="mpdp-badge-icon">🔒</span>Paiement sécurisé</div>
+        <div class="mpdp-badge"><span class="mpdp-badge-icon">💬</span>SAV 7j/7</div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} LEGAL {%- endcomment -%}
+  <section style="padding: 16px 20px; background: #f3f4f6; text-align: center;">
+    <p style="font-size:11px;color:#9ca3af;max-width:680px;margin:0 auto;">Le magnésium contribue à réduire la fatigue et à un fonctionnement normal du système nerveux (allégation EFSA). Ce produit est un complément alimentaire et ne constitue pas un médicament. Il ne se substitue pas à un traitement médical. Consultez votre médecin ou pharmacien si vous avez un traitement en cours.</p>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "PDP — Extra Magnelia",
+  "settings": []
+}
+{% endschema %}

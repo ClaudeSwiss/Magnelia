@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "lp-go-grab-your-magnesium-bottle",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

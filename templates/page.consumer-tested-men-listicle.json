@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "lp-consumer-tested-men-listicle",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

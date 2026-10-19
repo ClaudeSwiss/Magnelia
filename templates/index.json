@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement": {
+          "type": "announcement",
+          "settings": {
+            "text": "🎁 Achetez 3 sachets — recevez les Gummies D3 + K2 <b>offerts</b>",
+            "link": "/products/magnelia-magnesium-bisglycinate-gummies"
+          }
+        }
+      },
+      "block_order": ["announcement"],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "show_line_separator": false
+      }
+    },
+    "home_main": {
+      "type": "home-magnelia",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement",
+    "home_main"
+  ]
+}

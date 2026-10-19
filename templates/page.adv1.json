@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "lp-adv1",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
